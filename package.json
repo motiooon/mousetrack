@@ -1,5 +1,6 @@
 {
-  "name": "application-name",
+  "name": "mouse tracker",
+  "author": "Gabriel Baciu <gabriel.g.baciu@gmail.com>",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -8,6 +9,7 @@
   "dependencies": {
     "express": "3.0.3",
     "consolidate":"*",
-    "swig":"*"
+    "swig":"*",
+    "socket.io":"0.9.11"
   }
 }

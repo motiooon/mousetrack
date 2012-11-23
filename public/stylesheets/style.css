@@ -33,3 +33,10 @@ body {
 .marketing p + h4 {
     margin-top: 28px;
 }
+
+/******** Player styles  ***********/
+
+.replay_cursor {
+    width: 48px;
+    height: 48px;
+}
