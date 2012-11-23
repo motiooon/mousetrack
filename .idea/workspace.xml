@@ -23,7 +23,16 @@
       <file leaf-file-name="homepage.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/javascripts/app/homepage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="10" selection-start="805" selection-end="832" vertical-scroll-proportion="-0.9716599">
+            <state line="35" column="8" selection-start="803" selection-end="803" vertical-scroll-proportion="0.12145749">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="homepage.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/homepage.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="48" selection-start="364" selection-end="364" vertical-scroll-proportion="-3.75">
               <folding />
             </state>
           </provider>
@@ -61,7 +70,6 @@
         <option value="$PROJECT_DIR$/views/index.html" />
         <option value="$PROJECT_DIR$/sockets/index.js" />
         <option value="$PROJECT_DIR$/routes/homepage.js" />
-        <option value="$PROJECT_DIR$/views/homepage.html" />
         <option value="$PROJECT_DIR$/views/layout.html" />
         <option value="$PROJECT_DIR$/models/index.js" />
         <option value="$PROJECT_DIR$/models/mouse.js" />
@@ -69,8 +77,9 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/models/session.js" />
         <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
-        <option value="$PROJECT_DIR$/public/javascripts/app/homepage.js" />
         <option value="$PROJECT_DIR$/sockets/homepage.js" />
+        <option value="$PROJECT_DIR$/views/homepage.html" />
+        <option value="$PROJECT_DIR$/public/javascripts/app/homepage.js" />
       </list>
     </option>
   </component>
@@ -445,13 +454,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/homepage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="68" selection-start="1668" selection-end="1681" vertical-scroll-proportion="-6.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="13" selection-start="610" selection-end="610" vertical-scroll-proportion="0.0">
@@ -466,9 +468,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/homepage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="48" selection-start="364" selection-end="364" vertical-scroll-proportion="-3.75">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/app/homepage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="10" selection-start="805" selection-end="832" vertical-scroll-proportion="-0.9716599">
+        <state line="35" column="8" selection-start="803" selection-end="803" vertical-scroll-proportion="0.12145749">
           <folding />
         </state>
       </provider>

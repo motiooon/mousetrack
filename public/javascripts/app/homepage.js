@@ -33,10 +33,10 @@ M.Pages.Home = (function(){
     replay_btn.on("click", replay);
 
     $("body").mousemove(function(e) {
+      //console.log(e.pageX+"x"+e.pageY+"x"+ elapsedT);
       if(!M.Player.Controls.Recording) return;
       var elapsedT = new Date() - M.Player.Timer;
       M.Player.Timer = new Date();
-      console.log(e.pageX+"x"+e.pageY+"x"+ elapsedT);
       M.Player.Socket.emit('mouse_move',{cord:e.pageX+"x"+e.pageY+"x"+ elapsedT});
     });
 
@@ -49,7 +49,7 @@ M.Pages.Home = (function(){
       var y = coords[1];
       var tillNext = coords[2];
       if(data.total) M.Player.TotalMoves = data.total;
-      replay_cursor.css({"top": x + "px", "left": y + "px"});
+      replay_cursor.css({"left": x + "px", "top": y + "px"});
       M.Player.CurrentMoveIndex = data.index;
       if(M.Player.CurrentMoveIndex > M.Player.TotalMoves -2) return;
       window.setTimeout(askForNextMove, tillNext, true);
