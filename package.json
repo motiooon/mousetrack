@@ -15,6 +15,8 @@
     "mongoose":"3.4.0",
     "connect-redis":"1.4.5",
     "redis":"0.8.2",
-    "async":"0.1.22"
+    "async":"0.1.22",
+    "node-uuid":"1.4.0",
+    "connect":"2.7.0"
   }
 }

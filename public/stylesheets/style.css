@@ -40,3 +40,14 @@ body {
     width: 16px;
     height: 16px;
 }
+
+
+.replay_cursor img{
+    width: 16px;
+    height: 16px;
+    float: left;
+}
+
+.clicked{
+    background: url("/images/mouse_click.png") 0 0 no-repeat transparent ;
+}

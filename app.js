@@ -22,6 +22,9 @@ var redis_options = {
   client : client
 }
 
+global.cookieParser = express.cookieParser('mousetrack_cookie');
+global.sessionStore = new RedisStore(redis_options);
+
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
   app.set('views', __dirname + '/views');
@@ -31,8 +34,13 @@ app.configure(function(){
   app.use(express.logger('dev'));
   app.use(express.bodyParser());
   app.use(express.methodOverride());
-  app.use(express.cookieParser('mousetrack_cookie'));
-  app.use(express.session({secret : "mousetrack", key: 'express.sid', store : new RedisStore(redis_options)}));
+  app.use(cookieParser);
+  app.use(express.session({secret : "mousetrack", key: 'express.sid', store : sessionStore}));
+  app.use(function(req, res, next) {
+    res.locals.recording = req.session.recording ? req.session.recording : false;
+    res.locals.replaying = req.session.replaying ? req.session.replaying : false;
+    next();
+  });
   app.use(app.router);
   app.use(express.static(path.join(__dirname, 'public')));
   app.set('view options', { layout: false });
@@ -44,7 +52,15 @@ app.configure('development', function(){
 });
 
 //add a socket property to app so we can use it downstream
-app.set("socket", require('socket.io').listen(3456));
+var server = require('http').createServer(app);
+app.set("socket", require('socket.io').listen(server));
+
+app.get("socket").configure(function (){
+  app.get("socket").set('authorization', function (handshakeData, callback) {
+    console.log("handshakeData>>", handshakeData);
+    callback(null, true); // error first callback style
+  });
+});
 
 //Boot sockets -- will go into boot folder
 require("./sockets").call(this, app);
@@ -61,6 +77,6 @@ require("./models").call(this, app);
 // Load routes
 routes.call(this, app);
 
-http.createServer(app).listen(app.get('port'), function(){
+server.listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
 });
