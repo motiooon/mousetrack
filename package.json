@@ -1,7 +1,7 @@
 {
   "name": "mouse_tracker",
   "author": "Gabriel Baciu <gabriel.g.baciu@gmail.com>",
-  "version": "0.0.1-5",
+  "version": "0.0.1-6",
   "private": true,
   "scripts": {
     "start": "node app.js"
