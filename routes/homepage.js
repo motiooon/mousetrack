@@ -9,7 +9,7 @@ module.exports = function(app){
 
   app.get("/", function(req, res){
 
-    req.session.user =  uuid.v1();
+    if(req.session) req.session.user =  uuid.v1();
 
     var hostname = req.header('Host').split(':')[0];
 

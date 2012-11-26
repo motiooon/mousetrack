@@ -1,22 +1,26 @@
 {
   "name": "mouse_tracker",
   "author": "Gabriel Baciu <gabriel.g.baciu@gmail.com>",
-  "version": "0.0.1",
+  "version": "0.0.1-5",
   "private": true,
   "scripts": {
-    "start": "node app"
+    "start": "node app.js"
   },
   "dependencies": {
     "express": "3.0.3",
-    "consolidate":"*",
-    "swig":"*",
-    "socket.io":"0.9.11",
+    "consolidate": "*",
+    "swig": "*",
+    "socket.io": "0.9.11",
     "underscore": "*",
-    "mongoose":"3.4.0",
-    "connect-redis":"1.4.5",
-    "redis":"0.8.2",
-    "async":"0.1.22",
-    "node-uuid":"1.4.0",
-    "connect":"2.7.0"
+    "mongoose": "3.4.0",
+    "connect-redis": "1.4.5",
+    "redis": "0.8.2",
+    "async": "0.1.22",
+    "node-uuid": "1.4.0",
+    "connect": "2.7.0"
+  },
+  "subdomain": "mousetrack",
+  "engines": {
+    "node": "0.8.x"
   }
 }

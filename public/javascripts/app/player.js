@@ -9,7 +9,7 @@ M.Player.Controls.Replay = player_states.replaying;
 M.Player.CurrentMoveIndex = 0;
 M.Player.TotalMoves = 0;
 
-M.Player.Socket = io.connect('http://' + window.location.hostname + ':3000');
+M.Player.Socket = io.connect('http://' + window.location.hostname + ':5000');
 
 M.Pages.CorePlayer = (function(){
 
@@ -55,13 +55,15 @@ M.Pages.CorePlayer = (function(){
      * */
 
     $("body").click(function(e) {
-      console.log(e.target);
+      console.dir(e.target)
       if(!M.Player.Controls.Recording) return;
       var elapsedT = new Date() - M.Player.Timer;
       M.Player.Timer = new Date();
       M.Player.Socket.emit('click', JSON.stringify({
         e_type:e.type,
-        e_target:"", // TODO still to figure out how to identify an elem
+        e_nodeName:e.target.nodeName,
+        e_target_id:e.target.id,
+        e_target_class:e.target.class, // TODO still to figure out how to identify an elem
         elapsedT: elapsedT
       }));
     });
